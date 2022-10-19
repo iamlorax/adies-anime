@@ -15,7 +15,7 @@
         .column {
             float: left;
             padding: 10px;
-            height: 300px;
+            height: 100vh;
             /* Should be removed. Only for demonstration */
         }
 
@@ -34,6 +34,18 @@
             display: table;
             clear: both;
         }
+
+        .fill {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden
+        }
+        .fill img {
+            flex-shrink: 0;
+            min-width: 100%;
+            min-height: 100%
+        }
     </style>
 </head>
 
@@ -41,9 +53,8 @@
     <h2>Three Unequal Columns</h2>
 
     <div class="row">
-        <div class="column left" style="background-color:#aaa;">
-            <h2>Column 1</h2>
-            <p>Some text..</p>
+        <div class="column left" class="fill" style="background-color:#aaa;">
+            <img src="./spyfamily_dad.jpg">
         </div>
         <div class="column middle" style="background-color:#bbb;">
             <h2>Column 2</h2>
@@ -54,29 +65,6 @@
             <p>Some text..</p>
         </div>
     </div>
-</body>
-
-</html>
-
-<body>
-
-    <h2>Three Unequal Columns</h2>
-
-    <div class="row">
-        <div class="column left" style="background-color:#aaa;">
-            <h2>Column 1</h2>
-            <p>Some text..</p>
-        </div>
-        <div class="column middle" style="background-color:#bbb;">
-            <h2>Column 2</h2>
-            <p>Some text..</p>
-        </div>
-        <div class="column right" style="background-color:#ccc;">
-            <h2>Column 3</h2>
-            <p>Some text..</p>
-        </div>
-    </div>
-
 </body>
 
 </html>
