@@ -64,7 +64,7 @@ void goodbyeMessage() {
 
 void escapeSpecialCharacters(char* password) {
     int len = strlen(password);
-    char escapedPassword[len * 2 + 1];
+    char escapedPassword[len * 4 + 1];
     int j = 0;
 
     for (int i = 0; i < len; i++) {
@@ -90,6 +90,8 @@ void escapeSpecialCharacters(char* password) {
             case '*':
             case '?':
             case '~':
+                escapedPassword[j++] = '^';
+                escapedPassword[j++] = '^';
                 escapedPassword[j++] = '^';
                 break;
         }
